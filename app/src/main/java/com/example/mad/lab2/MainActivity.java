@@ -129,7 +129,8 @@ public class MainActivity extends AppCompatActivity {
                     //update.setVisibility(View.VISIBLE);
                     finish();
                     startActivity(getIntent());
-                    Toast.makeText(getApplicationContext(),"your Group list has changed", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(getApplicationContext(),"Your group list has changed", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),getString(R.string.group_changed), Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -292,7 +293,8 @@ public class MainActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
 
         TextView userID_tv = (TextView) findViewById(R.id.userID);
-        userID_tv.setText("welcome: " + mAuth.getCurrentUser().getEmail());
+        //userID_tv.setText(getString("Welcome: " + mAuth.getCurrentUser().getEmail());
+        userID_tv.setText(getString(R.string.welcome) + mAuth.getCurrentUser().getEmail());
         //userID_tv.setVisibility(View.GONE);
     }
 
@@ -325,7 +327,8 @@ public class MainActivity extends AppCompatActivity {
         }
 
         this.doubleBackToExitPressedOnce = true;
-        Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, getString(R.string.back), Toast.LENGTH_SHORT).show();
 
         new Handler().postDelayed(new Runnable() {
 

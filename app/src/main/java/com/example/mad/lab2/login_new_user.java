@@ -176,12 +176,12 @@ public class login_new_user extends AppCompatActivity implements LoaderCallbacks
 
                         Log.d(TAG, "createUserWithEmail:onComplete:" + task.isSuccessful());
                         //hideProgressDialog();
-
                         // If sign in fails, display a message to the user. If sign in succeeds
                         // the auth state listener will be notified and logic to handle the
                         // signed in user can be handled in the listener.
                         if (!task.isSuccessful()) {
-                            Toast.makeText(login_new_user.this, "Authentication failed.",
+                            //Toast.makeText(login_new_user.this, "Authentication failed",
+                            Toast.makeText(login_new_user.this, getString(R.string.aut_failed),
                                     Toast.LENGTH_SHORT).show();
 
                         } else {
@@ -203,7 +203,7 @@ public class login_new_user extends AppCompatActivity implements LoaderCallbacks
 
         String userEmail = email.getText().toString();
         if (TextUtils.isEmpty(userEmail)) {
-            email.setError("Required.");
+            email.setError(getString(R.string.error));
             valid = false;
         } else {
             email.setError(null);
@@ -211,7 +211,7 @@ public class login_new_user extends AppCompatActivity implements LoaderCallbacks
 
         String userPassword = password.getText().toString();
         if (TextUtils.isEmpty(userPassword)) {
-            password.setError("Required.");
+            password.setError(getString(R.string.error));
             valid = false;
         } else {
             password.setError(null);
@@ -243,7 +243,7 @@ public class login_new_user extends AppCompatActivity implements LoaderCallbacks
     public void showProgressDialog() {
         if (mProgressDialog == null) {
             mProgressDialog = new ProgressDialog(this);
-            mProgressDialog.setMessage("laoding");
+            mProgressDialog.setMessage(getString(R.string.loading));
             mProgressDialog.setIndeterminate(true);
         }
 

@@ -6,6 +6,7 @@
 
     <EditText
         android:id="@+id/new_group"
+        android:hint="@string/new_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -13,27 +14,23 @@
         android:layout_toLeftOf="@+id/new_item_photo"
         android:layout_toStartOf="@+id/new_item_photo"
         android:ems="10"
-        android:hint="@string/New_group_name"
-        android:inputType="textPersonName"
-        tools:text="New Group" />
+        android:inputType="textPersonName" />
 
     <Button
         android:id="@+id/new_item_photo_group"
+        android:text="@string/upl_pho"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/new_group"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="52dp"
-        android:text="Upload Photo"
-        android:visibility="gone"
-        tools:text="Upload photo" />
+        android:visibility="gone" />
 
     <Button
         android:id="@+id/new_group_save"
+        android:text="@string/save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="save"
-        android:text="Save"
         android:layout_alignBaseline="@+id/new_group_cancell"
         android:layout_alignBottom="@+id/new_group_cancell"
         android:layout_alignRight="@+id/new_group"
@@ -43,10 +40,9 @@
 
     <Button
         android:id="@+id/new_group_cancell"
+        android:text="@string/cancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="Cancel"
-        android:text="Cancel"
         android:layout_marginLeft="25dp"
         android:layout_marginStart="25dp"
         android:layout_below="@+id/new_group"

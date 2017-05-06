@@ -129,23 +129,28 @@ public class Invite_Activity extends AppCompatActivity {
 
                         Intent emailIntent = new Intent(Intent.ACTION_SEND);
                         emailIntent.setData(Uri.parse("mailto:"));
+                        //emailIntent.setData(Uri.parse(getString(R.string.mail_to)));  ////////////////////////
                         emailIntent.setType("text/plain");
-                        String mess="You have an invitation to join the group "+mes+" use this link Https://example.com/"+ ref.getKey().toString() +" for joining. If you dont have our app install it by using this link (HERE LINK TO GOOGLE PLAY STORE).";
+                        //String mess="You have an invitation to join the group "+mes+" use this link Https://example.com/"+ ref.getKey().toString() +" for joining. If you dont have our app install it by using this link (HERE LINK TO GOOGLE PLAY STORE).";
+                        String mess= getString(R.string.invitation) +mes+ getString(R.string.link)+ ref.getKey().toString() +getString(R.string.our_app);
                         emailIntent.putExtra(Intent.EXTRA_EMAIL, TO);
 
                         emailIntent.putExtra(Intent.EXTRA_SUBJECT, "subject");
+                        //emailIntent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.sub));//////////////////////////
                         emailIntent.putExtra(Intent.EXTRA_TEXT,mess);
 
 
 
                         try {
-                            startActivity(Intent.createChooser(emailIntent, "Send mail..."));
+                            //startActivity(Intent.createChooser(emailIntent, "Send mail..."));
+                            startActivity(Intent.createChooser(emailIntent, getString(R.string.send_mail)));
 
                             Log.i("Finished sending email", "");
 
                         } catch (android.content.ActivityNotFoundException ex) {
                             Toast.makeText(Invite_Activity.this,
-                                    "There is no email client installed.", Toast.LENGTH_SHORT).show();
+                                    //"There is no email client installed.", Toast.LENGTH_SHORT).show();
+                                    getString(R.string.no_mail), Toast.LENGTH_SHORT).show();
                         }
 
 

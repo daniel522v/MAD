@@ -12,19 +12,19 @@
 
     <TextView
         android:id="@+id/textView2"
+        android:text="@string/insert_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="66dp"
-        android:text="*Please insert the email for new users\n *Insert the UserID for registered users"
         android:layout_alignParentTop="true"
         android:layout_alignLeft="@+id/invite_text"
         android:layout_alignStart="@+id/invite_text" />
 
     <Button
-        android:text="Invite"
+        android:id="@+id/invite_button"
+        android:text="@string/invite"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/invite_button"
         android:onClick="invite_button"
         android:layout_centerVertical="true"
         android:layout_alignRight="@+id/invite_text"
@@ -33,6 +33,7 @@
         android:layout_marginEnd="60dp" />
 
     <EditText
+        android:id="@+id/invite_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
@@ -42,6 +43,5 @@
         android:layout_alignParentStart="true"
         android:layout_marginLeft="46dp"
         android:layout_marginStart="46dp"
-        android:id="@+id/invite_text"
-        android:hint="some@domail.com" />
+        android:hint="@string/email" />
 </RelativeLayout>

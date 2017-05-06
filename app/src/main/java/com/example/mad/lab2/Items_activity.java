@@ -157,6 +157,16 @@ public class Items_activity extends AppCompatActivity {
             return true;
 
         }
+
+        if (id == R.id.action_ModifyGroup) {
+
+            Intent i = new Intent(this, ModifyActivity.class);
+            i.putExtra("GroupID",GroupID);
+            startActivity(i);
+            return true;
+
+        }
+
         if (id == R.id.action_invitePeople) {
             Intent i = new Intent(this, Invite_Activity.class);
             i.putExtra("GroupID",GroupID);
@@ -170,8 +180,10 @@ public class Items_activity extends AppCompatActivity {
             final boolean[] group_deleted = {false};
             new AlertDialog.Builder(this)
                     .setIcon(android.R.drawable.ic_dialog_alert)
-                    .setTitle("Leaving Group")
-                    .setMessage("Are you sure you want to leave this group?")
+                    //.setTitle("Leaving Group")
+                    .setTitle(getString(R.string.leaving))
+                    //.setMessage("Are you sure you want to leave this group?")
+                    .setMessage(getString(R.string.leave_sure))
                     .setPositiveButton("Yes", new DialogInterface.OnClickListener()
                     {
                         @Override

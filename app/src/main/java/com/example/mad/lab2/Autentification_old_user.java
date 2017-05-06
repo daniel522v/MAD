@@ -60,7 +60,7 @@ public class Autentification_old_user extends AppCompatActivity implements Loade
     private static final String[] DUMMY_CREDENTIALS = new String[]{
             "foo@example.com:hello", "bar@example.com:world"
     };
- 
+
     private UserLoginTask mAuthTask = null;
 
     // UI references.
@@ -237,7 +237,7 @@ public class Autentification_old_user extends AppCompatActivity implements Loade
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
-                    Toast.makeText(Autentification_old_user.this, "Correct log in",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Autentification_old_user.this, getString(R.string.cor_login),Toast.LENGTH_SHORT).show();
                 }
             }
         });
