@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/home/stiben/Downloads/MAD/MAD/lab2/MAD/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
+        <dex dex="/home/stiben/Downloads/MAD/MAD/lab2/MAD/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_18485e2b4c47a8d5e06c24d3a4268fd5917b896f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/stiben/Downloads/MAD/MAD/lab2/MAD/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7159c74272eb1b581e929af9bb3dc567a7bc1b99">
+        <dex dex="/home/stiben/Downloads/MAD/MAD/lab2/MAD/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_31452e9ae6cacfa12dcb2b9fed24dfd514f2fce6/classes.dex" />
+    </item>
+
+</items>
