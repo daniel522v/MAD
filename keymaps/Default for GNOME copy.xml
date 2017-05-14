@@ -1,0 +1,10 @@
+<keymap version="1" name="Default for GNOME copy" parent="Default for GNOME">
+  <action id="CommentByBlockComment">
+    <keyboard-shortcut first-keystroke="shift ctrl slash" />
+    <keyboard-shortcut first-keystroke="shift ctrl divide" />
+    <keyboard-shortcut first-keystroke="ctrl 1" />
+  </action>
+  <action id="DuplicatesForm.SendToLeft" />
+  <action id="FileChooser.GotoHome" />
+  <action id="GotoBookmark1" />
+</keymap>
